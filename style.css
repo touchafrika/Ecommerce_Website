@@ -1,5 +1,5 @@
 *{
-   margine: 0;
+   margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
@@ -31,7 +31,7 @@ nav ul li{
 
 a{
   text-decoration: none;
-  color: #555;
+  color: #fff;
 }
 
 p{
@@ -83,7 +83,7 @@ p{
 }
 
 .header{
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#00b6a1, #009688);
 }
 
 .header .row{
@@ -204,14 +204,14 @@ h4{
 /* footer */
 
 .footer{
-  background: #000;
-  color: #8a8a8a;
+  background: #009688;
+  color: #fff;
   font-size: 14px;
   padding: 60px 0 20px;
 }
 
 .footer p{
-  color: #8a8a8a;
+  color: #fff;
 }
 
 .footer h3{
@@ -220,12 +220,16 @@ h4{
 }
 
 .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
-  min-width: 240px;
+  min-width: 250px;
   margin-bottom: 20px;
 }
 
+.footer-col-1{
+  flex-basis: 30%;
+}
+
 .footer-col-2{
-  flex-basis: 1;
+  flex: 1;
   text-align: center;
 }
 
@@ -235,10 +239,70 @@ h4{
 }
 
 .footer-col-3, .footer-col-4{
-  flex-basis: 12%
-  text-align: center:
+  flex-basis: 12%;
+  text-align: center;
 }
 
 ul{
   list-style-type: none;
+}
+
+.footer hr{
+  border: none;
+  height: 1px;
+  background: #fff;
+  margin: 20px;
+}
+
+.copyright{
+  text-align: center;
+}
+
+.menu-icon{
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+/* media query for menu */
+
+@media only screen and (max-width: 800px){
+  nav ul{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    background: #009688;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.6s;
+  }
+
+  nav ul li{
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a{
+    color: #fff;
+  }
+
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+
+  }
+}
+
+/* media query for less than 600 screen size */
+
+@media only screen and (max-width: 600px){
+  .row{
+    text-align: center;
+  }
+
+  .col-2, .col-3, .col-4{
+    flex-basis: 100%;
+  }
 }
